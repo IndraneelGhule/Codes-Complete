@@ -7,7 +7,7 @@ public class Testing5 {
 	@Test
 	public void launchChrome() {
 		
-		System.out.println("********************************");
+		System.out.println("****************IG****************");
 	}
 	
 }
