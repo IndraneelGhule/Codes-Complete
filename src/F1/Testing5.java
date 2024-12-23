@@ -20,7 +20,7 @@ public class Testing5 {
 		System.out.println("****************Execution Started****************");
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(description = "Get Users", priority = 1, enabled = true)
 	public void getUsers() {
 		given()
 		.when()
@@ -37,7 +37,7 @@ public class Testing5 {
 //	    "job": "leader"
 //	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(description = "Add Users", priority = 2, enabled = true)
 	public void addUser() {
 		HashMap map = new HashMap();
 		map.put("name", "pawan");
@@ -55,7 +55,7 @@ public class Testing5 {
 
 	int newUserId = 0;
 
-	@Test(priority = 3, enabled = true)
+	@Test(description = "Add Users", priority = 3, enabled = true)
 	public void updateUser() {
 		// Create 1 User using : POST
 		System.out.println("Create New User: ");
@@ -93,7 +93,7 @@ public class Testing5 {
 			.log().all();
 	}
 
-	@Test(priority = 4, dependsOnMethods = { "updateUser" }, enabled = true)
+	@Test(description = "Add Users", priority = 4, dependsOnMethods = { "updateUser" }, enabled = true)
 	public void deleteUser() {
 		System.out.println("****************Deleting User: "+newUserId+"****************: "+newUserId);
 		
